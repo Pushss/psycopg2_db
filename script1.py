@@ -20,8 +20,8 @@ def view(): #function to view the db in console
     conn=sqlite3.connect("lite.db") #create connection to db(pass database file)
     cur=conn.cursor() #create cursor within db
     cur.execute("SELECT * FROM store")
-    rows=cur.fetchall()
-    conn.close()
-    return rows
+    rows=cur.fetchall() #variable storing all data from TABLE store
+    conn.close() #close conection to db
+    return rows #return variable storing all data from the TABLE
 
-print(view())
+print(view()) #print db rows as list
