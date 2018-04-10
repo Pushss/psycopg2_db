@@ -14,7 +14,7 @@ def insert(item,quantity,price): #function to insert data using insert("coffer c
         conn.commit() #commit changes
         conn.close() #close connection
 
-insert("coffee cup",3,1.5) #insert data into db 
+insert("coffee cup",3,1.5) #insert data into db
 
 def view(): #function to view the db in console
     conn=sqlite3.connect("lite.db") #create connection to db(pass database file)
